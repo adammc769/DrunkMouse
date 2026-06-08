@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls, System.Math;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls, System.Math, Unit3;
 
 type
   TForm1 = class(TForm)
@@ -18,12 +18,14 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Info: TButton;
     procedure BtnStartClick(Sender: TObject);
     procedure TimerMyszkaTimer(Sender: TObject);
     procedure TimerKomunikatyTimer(Sender: TObject);
     procedure TimerTrybyTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure InfoClick(Sender: TObject);
   private
     { Private declarations }
     Aktywne: Boolean;
@@ -60,6 +62,11 @@ end;
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
   UnregisterHotKey(Handle, 1);
+end;
+
+procedure TForm1.InfoClick(Sender: TObject);
+begin
+  Form3.Show;
 end;
 
 procedure TForm1.WMHotKey(var Msg: TWMHotKey);
@@ -228,7 +235,7 @@ begin
     5: Komunikat := 'WskaŸnik myszy uciek³ na inny ekran. Proszê czekaæ, a¿ wróci pieszo.';
     6: Komunikat := 'B³¹d grawitacji kursora. Za chwilê myszka zacznie spadaæ w dó³ ekranu.';
   end;
-  Winapi.Windows.MessageBox(0, PChar(Komunikat), 'DrunkMouse System Warning', MB_OK or MB_ICONWARNING or MB_TASKMODAL or MB_SETFOREGROUND);
+  Winapi.Windows.MessageBox(0, PChar(Komunikat), 'SYSTEM', MB_OK or MB_ICONWARNING or MB_TASKMODAL or MB_SETFOREGROUND);
 end;
 
 procedure TForm1.TimerKomunikatyTimer(Sender: TObject);

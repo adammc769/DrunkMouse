@@ -71,24 +71,32 @@ object Form1: TForm1
     TabOrder = 1
     OnClick = BtnStartClick
   end
+  object Info: TButton
+    Left = 541
+    Top = 408
+    Width = 75
+    Height = 25
+    Caption = 'O programie'
+    TabOrder = 2
+    OnClick = InfoClick
+  end
   object TimerMyszka: TTimer
     Enabled = False
     Interval = 1
     OnTimer = TimerMyszkaTimer
-    Left = 200
-    Top = 312
+    Left = 24
+    Top = 384
   end
   object TimerKomunikaty: TTimer
     Enabled = False
     Interval = 60000
     OnTimer = TimerKomunikatyTimer
-    Left = 328
-    Top = 280
+    Left = 120
+    Top = 384
   end
   object TimerTryby: TTimer
     Enabled = False
-    Interval = 100000
-    Left = 456
-    Top = 352
+    Left = 208
+    Top = 384
   end
 end

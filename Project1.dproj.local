@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.075,C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.dfm=F:\delphi\DrunkMouse\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.029,C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Project1.dproj=F:\delphi\DrunkMouse\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.075,C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.pas=F:\delphi\DrunkMouse\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.075,F:\delphi\DrunkMouse\Unit1.dfm=C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.982,=C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026.06.07 19:51:54.385,=C:\Users\Adam\Documents\Embarcadero\Studio\Projects\DrunkMouse\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.075,F:\delphi\DrunkMouse\Unit1.pas=C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.029,F:\delphi\DrunkMouse\Project1.dproj=C:\Users\adas2\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.385,=C:\Users\Adam\Documents\Embarcadero\Studio\Projects\DrunkMouse\Unit2.pas</Transaction>
+    <Transaction>2026.06.08 10:25:30.535,=C:\Users\Adam\Documents\Embarcadero\Studio\Projects\DrunkMouse\Unit3.pas</Transaction>
   </Transactions>
 </BorlandProject>
