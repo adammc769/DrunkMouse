@@ -1,9 +1,9 @@
-object Form1: TForm1
+﻿object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'DrunkMouse'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 520
+  ClientWidth = 700
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object Form1: TForm1
   OnDestroy = FormDestroy
   TextHeight = 15
   object Label1: TLabel
-    Left = 168
-    Top = 8
+    Left = 216
+    Top = 16
     Width = 239
     Height = 54
     Caption = 'Drunk Mouse'
@@ -27,76 +27,167 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 120
-    Top = 68
-    Width = 162
+    Left = 226
+    Top = 70
+    Width = 244
     Height = 15
-    Caption = 'Program do prankowania ludzi'
+    Caption = 'Trening trafiania w uciekajacy, pijany kursor'
   end
-  object Label3: TLabel
-    Left = 224
-    Top = 131
-    Width = 126
+  object LblCzulosc: TLabel
+    Left = 32
+    Top = 116
+    Width = 112
     Height = 15
-    Caption = 'Czu'#322'o'#347#263' drgania myszk'#261
+    Caption = 'Czulosc drgania: 35'
   end
   object Label4: TLabel
-    Left = 16
-    Top = 192
-    Width = 26
+    Left = 32
+    Top = 182
+    Width = 53
     Height = 15
-    Caption = 'Ma'#322'a'
+    Caption = 'spokojnie'
   end
   object Label5: TLabel
-    Left = 590
-    Top = 192
-    Width = 26
+    Left = 630
+    Top = 182
+    Width = 34
     Height = 15
-    Caption = 'Du'#380'a'
+    Caption = 'chaos'
+  end
+  object LabelPoziom: TLabel
+    Left = 40
+    Top = 222
+    Width = 95
+    Height = 15
+    Caption = 'Poziom trudnosci'
+  end
+  object LblStatus: TLabel
+    Left = 232
+    Top = 300
+    Width = 76
+    Height = 15
+    Caption = 'Status: gotowy'
+  end
+  object LblWynik: TLabel
+    Left = 232
+    Top = 326
+    Width = 78
+    Height = 15
+    Caption = 'Trafienia: 0 / 10'
+  end
+  object LblTryb: TLabel
+    Left = 232
+    Top = 352
+    Width = 85
+    Height = 15
+    Caption = 'Tryb: Lekki stres'
+  end
+  object LblCzas: TLabel
+    Left = 232
+    Top = 378
+    Width = 62
+    Height = 15
+    Caption = 'Czas: 00:00'
+  end
+  object LblHotkey: TLabel
+    Left = 40
+    Top = 434
+    Width = 465
+    Height = 15
+    Caption = 'Zatrzymanie: przycisk Stop albo Alt+M. Po zatrzymaniu program nie rusza kursorem.'
   end
   object TrackBar1: TTrackBar
-    Left = 8
-    Top = 152
-    Width = 617
+    Left = 32
+    Top = 136
+    Width = 636
     Height = 45
     Max = 150
+    Position = 35
     TabOrder = 0
+    OnChange = TrackBar1Change
   end
   object BtnStart: TButton
-    Left = 24
-    Top = 272
-    Width = 75
-    Height = 25
-    Caption = 'Start'
+    Left = 40
+    Top = 296
+    Width = 150
+    Height = 34
+    Caption = 'Start treningu'
     TabOrder = 1
     OnClick = BtnStartClick
   end
+  object CmbPoziom: TComboBox
+    Left = 40
+    Top = 242
+    Width = 180
+    Height = 23
+    Style = csDropDownList
+    ItemIndex = 1
+    TabOrder = 2
+    Text = 'Normalny'
+    OnChange = CmbPoziomChange
+    Items.Strings = (
+      'Rozgrzewka'
+      'Normalny'
+      'Chaos'
+      'Legenda')
+  end
+  object ChkKomunikaty: TCheckBox
+    Left = 260
+    Top = 244
+    Width = 170
+    Height = 17
+    Caption = 'Komunikaty systemowe'
+    Checked = True
+    State = cbChecked
+    TabOrder = 3
+    OnClick = ChkKomunikatyClick
+  end
+  object ChkZmieniajTryby: TCheckBox
+    Left = 466
+    Top = 244
+    Width = 190
+    Height = 17
+    Caption = 'Losuj tryby co kilka sekund'
+    Checked = True
+    State = cbChecked
+    TabOrder = 4
+    OnClick = ChkZmieniajTrybyClick
+  end
   object Info: TButton
-    Left = 541
-    Top = 408
-    Width = 75
+    Left = 548
+    Top = 474
+    Width = 120
     Height = 25
     Caption = 'O programie'
-    TabOrder = 2
+    TabOrder = 5
     OnClick = InfoClick
   end
   object TimerMyszka: TTimer
     Enabled = False
-    Interval = 1
+    Interval = 8
     OnTimer = TimerMyszkaTimer
     Left = 24
-    Top = 384
+    Top = 472
   end
   object TimerKomunikaty: TTimer
     Enabled = False
-    Interval = 60000
+    Interval = 45000
     OnTimer = TimerKomunikatyTimer
-    Left = 120
-    Top = 384
+    Left = 112
+    Top = 472
   end
   object TimerTryby: TTimer
     Enabled = False
+    Interval = 10000
+    OnTimer = TimerTrybyTimer
     Left = 208
-    Top = 384
+    Top = 472
+  end
+  object TimerCzas: TTimer
+    Enabled = False
+    Interval = 1000
+    OnTimer = TimerCzasTimer
+    Left = 296
+    Top = 472
   end
 end

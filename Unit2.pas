@@ -1,14 +1,15 @@
-unit Unit2;
+ï»¿unit Unit2;
 
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
   TFormCel = class(TForm)
-    LabelCel: TLabel; // Upewnij siê, ¿e Twój TLabel nazywa siê LabelCel lub zmieñ nazwê w kodzie
+    LabelCel: TLabel;
+    procedure FormCreate(Sender: TObject);
     procedure FormMouseEnter(Sender: TObject);
   private
     { Private declarations }
@@ -21,18 +22,23 @@ var
 
 implementation
 
-// £¹czymy z g³ówn¹ form¹, ¿eby mieæ dostêp do jej funkcji
-uses Unit1;
+uses
+  Unit1;
 
 {$R *.dfm}
 
+procedure TFormCel.FormCreate(Sender: TObject);
+begin
+  OnMouseEnter := FormMouseEnter;
+  OnClick := FormMouseEnter;
+  LabelCel.OnMouseEnter := FormMouseEnter;
+  LabelCel.OnClick := FormMouseEnter;
+end;
+
 procedure TFormCel.FormMouseEnter(Sender: TObject);
 begin
-  // Gdy kursor wjedzie w okienko, przekazujemy informacjê do Unit1
-  if Form1.TimerMyszka.Enabled then
-  begin
+  if Assigned(Form1) and Form1.TimerMyszka.Enabled then
     Form1.ZarejestrujTrafienie;
-  end;
 end;
 
 end.

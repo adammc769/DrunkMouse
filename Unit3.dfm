@@ -1,9 +1,9 @@
-object Form3: TForm3
+﻿object Form3: TForm3
   Left = 0
   Top = 0
   Caption = 'DrunkMouse'
-  ClientHeight = 241
-  ClientWidth = 352
+  ClientHeight = 260
+  ClientWidth = 390
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,18 +12,18 @@ object Form3: TForm3
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 160
-    Top = 8
+    Left = 176
+    Top = 12
     Width = 27
     Height = 15
     Caption = 'INFO'
   end
   object Label2: TLabel
-    Left = 72
-    Top = 8
-    Width = 200
+    Left = 84
+    Top = 28
+    Width = 224
     Height = 37
-    Caption = 'Drunk mouse 1.3'
+    Caption = 'Drunk mouse 1.5'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -27
@@ -32,15 +32,14 @@ object Form3: TForm3
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 0
-    Top = 51
-    Width = 353
+    Left = 24
+    Top = 84
+    Width = 336
     Height = 102
     Caption = 
-      'Autor: Adam C (adamlatitude)'#13#10#13#10'Program do prankowania ludzi rus' +
-      'zaj'#261'c myszk'#261'.'#13#10'Napisany w Delphi na podstawie Object Pascal'#13#10'na ' +
-      'laptopie Dell Latitude 5320. Sk'#261'd jest moja nazwa'#13#10' adamlatitude' +
-      '.'
+      'Autor: Adam C (adamlatitude)'#13#10#13#10'Wersja 1.5 ma 14 trybow ruchu, poz' +
+      'iomy trudnosci,'#13#10'licznik czasu, przelacznik komunikatow i instalato' +
+      'r Inno Setup.'#13#10'Awaryjne zatrzymanie zawsze dziala przez Alt+M.'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -49,16 +48,10 @@ object Form3: TForm3
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 0
-    Top = 230
-    Width = 252
-    Height = 11
-    Caption = 'Dla moosecrafta: STOP MAKING CRINGE YOU CRINGY MOTHERFUCKER'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -8
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
+    Left = 24
+    Top = 228
+    Width = 330
+    Height = 15
+    Caption = 'Po zatrzymaniu aplikacja ukrywa cel i przestaje ruszac kursorem.'
   end
 end

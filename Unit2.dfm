@@ -1,10 +1,10 @@
-object FormCel: TFormCel
+﻿object FormCel: TFormCel
   Left = 0
   Top = 0
   BorderStyle = bsNone
-  Caption = 'DOMO ARIGATO MISTER CZ'#321'OWIEK HEHEHE'
-  ClientHeight = 346
-  ClientWidth = 463
+  Caption = 'DrunkMouse target'
+  ClientHeight = 250
+  ClientWidth = 430
   Color = clRed
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,23 +12,24 @@ object FormCel: TFormCel
   Font.Name = 'Segoe UI'
   Font.Style = []
   FormStyle = fsStayOnTop
+  OnCreate = FormCreate
   TextHeight = 15
   object LabelCel: TLabel
-    Left = 8
-    Top = 32
-    Width = 426
-    Height = 112
-    Caption = 
-      'WEJD'#379' TUTAJ ABY OGRZA'#262' MYSZKE '#13#10'U'#379'YTKOWNIKU CO JEST TAKI '#379'E'#13#10' NI' +
-      'E UMIE KLIKN'#260#262' CTRL + SHIFT + ESC'#13#10'I SCROLOWA'#262' I ZAKO'#323'CZY'#262' PROJE' +
-      'CT1 HAHA !!!'
-    Color = clGray
+    Left = 0
+    Top = 0
+    Width = 430
+    Height = 250
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'TRAFIENIA: 0 / 10'#13#10'Wejdz myszka w pole'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
+    Font.Color = clWhite
+    Font.Height = -18
     Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentColor = False
+    Font.Style = [fsBold]
+    Layout = tlCenter
     ParentFont = False
+    Transparent = True
+    WordWrap = True
   end
 end
